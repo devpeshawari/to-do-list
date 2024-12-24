@@ -2,14 +2,13 @@ const mongoose = require("mongoose");
 const ObjectID = mongoose.Schema.Types.ObjectId;
 
 const userSchema = new mongoose.Schema({
-    userID: {type: ObjectID, unique: true},
+    name: {type: String},
+    userID: {type: String},
     password: {type: String},
-    name: {type: String}
-    
 });
 
 const postSchema = new mongoose.Schema({
-    postID: {type: ObjectID, unique: true},
+    postID: {type: String},
     userID: {type: String},
     title: {type: String},
     body: {type: String},
